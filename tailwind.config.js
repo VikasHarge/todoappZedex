@@ -9,9 +9,7 @@ module.exports = {
       'border-gray' : '#D8D8D8',
       'red' : '#FF0000',
       'lightPink' : '#F3F3F3'
-
     },
-
     fontSize: {
       'pm': ['31px', {
         fontWeight: '700',
