@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import TodoFilter from './components/TodoFilter';
+import TodoActions from './components/TodoActions';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='w-full h-[100vh] bg-[#EA5959] flex items-center justify-center font-lato' >
+      <div className='w-[983px] h-[702px] bg-[#ffffff] rounded-lg shadow-10xl flex' >
+        <TodoFilter/>
+        <TodoActions/>
+      </div>
     </div>
   );
 }
