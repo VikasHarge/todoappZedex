@@ -6,7 +6,7 @@ const TodoBox = () => {
     const [todoFilter, setTodoFilter] = useState('All')
 
     return (
-        <div className='w-[983px] h-[702px] bg-[#ffffff] rounded-lg shadow-10xl flex' >
+        <div className='w-4/5 h-4/5 bg-[#ffffff] rounded-lg shadow-10xl flex' >
             <div className='w-[209px] h-100 border-r-[1px] border-r-[#D8D8D8]'>
                 <nav>
                     <ul className='flex items-start justify-center flex-col pl-[51px] pt-[139px] gap-6'>
