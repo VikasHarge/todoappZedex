@@ -6,7 +6,7 @@ import TodoActions from './components/TodoActions';
 function App() {
   return (
     <div 
-      className='w-full h-[100vh] bg-[#EA5959] flex items-center justify-center font-lato' 
+      className='w-full h-[100vh] bg-pink flex items-center justify-center font-lato' 
     >
         <TodoBox/>
     </div>
