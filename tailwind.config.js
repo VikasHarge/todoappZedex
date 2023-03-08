@@ -5,10 +5,12 @@ module.exports = {
     colors: {
       'pink': '#EA5959',
       'grey' : '#525252',
+      'darkGrey' : "#5A5A5A",
       'black' : '#000000',
-      'border-gray' : '#D8D8D8',
+      'borderGrey' : '#D8D8D8',
       'red' : '#FF0000',
-      'lightPink' : '#F3F3F3'
+      'lightPink' : '#F3F3F3',
+      'white' : '#ffff'
     },
     fontSize: {
       'pm': ['31px', {
@@ -36,8 +38,16 @@ module.exports = {
       },
       boxShadow: {
         '10xl': '0px 10px 10px rgba(0, 0, 0, 0.25)',
-      }
+      },
+      padding : {
+        '51px' : '51px'
+      },
     },
+  },
+  variants : {
+    extend : {
+      display : ["group-hover"]
+    }
   },
   plugins: [],
 }

@@ -60,14 +60,15 @@ const TodoActions = ({ todoFilter }) => {
 
 
     return (
-        <div className='w-[774px]  py-[30px] pr-[43px] pl-[53px] bg-yellow' >
+        <div className='w-4/5  py-8 pr-8 pl-14' >
             <h1 className='text-pm mb-6' >{`${todoFilter} Tasks`}</h1>
-            <form className='w-[678px] mb-[16px]' onSubmit={handleSubmit} >
+            <form className='w-full mb-4' onSubmit={handleSubmit} >
                 <input
-                    className='w-[678px] h-[47px] pl-[27px] bg-lightPink rounded-2xl'
+                    className='w-full h-12 pl-7 bg-lightPink rounded-2xl'
                     placeholder='Add a new task inside ‘All’ category'
                     value={todoText || ''}
                     onChange={e => setTodoText(e.target.value)}
+                    disabled = {todoFilter === 'Completed' ? true : false}
                 />
             </form>
             {
