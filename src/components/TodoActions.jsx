@@ -59,17 +59,20 @@ const TodoActions = ({ todoFilter }) => {
 
     return (
         <div className='w-4/5 h-full  py-8 pr-8 pl-14' >
-            <h1 className='text-pm mb-6' >{`${todoFilter} Tasks`}</h1>
-            <form className='w-full mb-4' onSubmit={handleSubmit} >
-                <input
-                    className='w-full h-12 pl-7 bg-lightPink rounded-2xl'
-                    placeholder='Add a new task inside ‘All’ category'
-                    value={todoText || ''}
-                    onChange={e => setTodoText(e.target.value)}
-                    disabled={todoFilter === 'Completed' ? true : false}
-                />
-            </form>
-            <div className='w-full h-inherit overflow-y-auto bg-red' >
+            <div className='h-1/4 w-full' >
+                <h1 className='text-pm mb-6' >{`${todoFilter} Tasks`}</h1>
+                <form className='w-full mb-4' onSubmit={handleSubmit} >
+                    <input
+                        className='w-full h-12 pl-7 bg-lightPink rounded-2xl'
+                        placeholder='Add a new task inside ‘All’ category'
+                        value={todoText || ''}
+                        onChange={e => setTodoText(e.target.value)}
+                        disabled={todoFilter === 'Completed' ? true : false}
+                    />
+                </form>
+
+            </div>
+            <div className='w-full h-3/4 overflow-y-auto' >
                 {
                     displayTodos && displayTodos.map((todo, i) => (
                         <TodoList todo={todo} key={todo.id} />
