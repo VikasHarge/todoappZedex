@@ -34,7 +34,6 @@ const TodoList = ({ todo }) => {
             }
             <h2 className={`pl-5 text-th text-darkGrey ${todo.completed ? 'opacity-50 line-through' : ''}`} >{todo.todoText}</h2>
 
-
             <div className='w-7 h-7 flex items-center justify-center absolute right-0 cursor-pointer hidden group-hover:block' onClick={handleDelete}>
                 <RiDeleteBin6Line className='text-sd1 fill-red ' />
             </div>

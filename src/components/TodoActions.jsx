@@ -57,10 +57,8 @@ const TodoActions = ({ todoFilter }) => {
         setTodoText('')
     }
 
-
-
     return (
-        <div className='w-4/5  py-8 pr-8 pl-14' >
+        <div className='w-4/5 h-full  py-8 pr-8 pl-14' >
             <h1 className='text-pm mb-6' >{`${todoFilter} Tasks`}</h1>
             <form className='w-full mb-4' onSubmit={handleSubmit} >
                 <input
@@ -68,20 +66,16 @@ const TodoActions = ({ todoFilter }) => {
                     placeholder='Add a new task inside ‘All’ category'
                     value={todoText || ''}
                     onChange={e => setTodoText(e.target.value)}
-                    disabled = {todoFilter === 'Completed' ? true : false}
+                    disabled={todoFilter === 'Completed' ? true : false}
                 />
             </form>
-            {
-                displayTodos.length > 0 ? <>
-                    <div className='w-full h-100' >
-                        {
-                            displayTodos.map((todo, i) => (
-                                <TodoList todo={todo} key={todo.id} />
-                            ))
-                        }
-                    </div>
-                </> : <></>
-            }
+            <div className='w-full h-inherit overflow-y-auto bg-red' >
+                {
+                    displayTodos && displayTodos.map((todo, i) => (
+                        <TodoList todo={todo} key={todo.id} />
+                    ))
+                }
+            </div>
         </div>
     )
 }
